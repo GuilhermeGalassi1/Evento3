@@ -17,7 +17,13 @@ public class BebidasPanel extends JPanel {
         for (String tipo : tiposBebidas) {
             add(new JLabel("Descrição de " + tipo + ":"), gbc);
             gbc.gridx++;
-            add(new JTextField(30), gbc);
+            add(new JTextField(20), gbc);
+            gbc.gridx = 0;
+            gbc.gridy++;
+            
+            add(new JLabel("Valor de " + tipo + ":"), gbc);
+            gbc.gridx++;
+            add(new JTextField(10), gbc);
             gbc.gridx = 0;
             gbc.gridy++;
         }
@@ -26,6 +32,6 @@ public class BebidasPanel extends JPanel {
         gbc.gridy++;
         add(new JLabel("Valor Total de Bebidas:"), gbc);
         gbc.gridx++;
-        add(new JTextField(10), gbc);
+        add(new JTextField(5), gbc);
     }
 }

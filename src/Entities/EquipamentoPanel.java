@@ -14,7 +14,7 @@ public class EquipamentoPanel extends JPanel {
 
         add(new JLabel("Descrição do Equipamento:"), gbc);
         gbc.gridx++;
-        add(new JTextField(30), gbc);
+        add(new JTextField(15), gbc);
 
         gbc.gridx = 0;
         gbc.gridy++;

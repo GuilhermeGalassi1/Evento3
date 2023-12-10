@@ -14,14 +14,16 @@ public class GastosPanel extends JPanel {
 
         // Adiciona as subabas dentro da aba Gastos
         JTabbedPane tabbedPaneGastos = new JTabbedPane();
+        tabbedPaneGastos.addTab("Bebidas", new BebidasPanel()); 
+        tabbedPaneGastos.addTab("Bombeiro", new BombeiroPanel());  
         tabbedPaneGastos.addTab("Decoração", new DecoracaoPanel());
-        tabbedPaneGastos.addTab("Bebidas", new BebidasPanel());
+        tabbedPaneGastos.addTab("Equipamento", new EquipamentoPanel());
+        tabbedPaneGastos.addTab("Espaço", new EspacoPanel());
         tabbedPaneGastos.addTab("Segurança", new SegurancaPanel());
-        tabbedPaneGastos.addTab("Bombeiro", new BombeiroPanel());
         tabbedPaneGastos.addTab("Limpeza", new LimpezaPanel());
         tabbedPaneGastos.addTab("Som", new SomPanel());
-        tabbedPaneGastos.addTab("Espaço", new EspacoPanel());
-        tabbedPaneGastos.addTab("Equipamento", new EquipamentoPanel());
+        
+        
 
         gbc.gridx = 0;
         gbc.gridy++;

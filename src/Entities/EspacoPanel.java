@@ -1,10 +1,17 @@
 package Entities;
 
-import javax.swing.*;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 import com.toedter.calendar.JDateChooser;
-import java.awt.*;
 
 public class EspacoPanel extends JPanel {
+	
     public EspacoPanel() {
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
@@ -15,13 +22,13 @@ public class EspacoPanel extends JPanel {
 
         add(new JLabel("Localização:"), gbc);
         gbc.gridx++;
-        add(new JTextField(30), gbc);
+        add(new JTextField(20), gbc);
 
         gbc.gridx = 0;
         gbc.gridy++;
         add(new JLabel("Horário:"), gbc);
         gbc.gridx++;
-        add(new JTextField(30), gbc);
+        add(new JTextField(10), gbc);
 
         gbc.gridx = 0;
         gbc.gridy++;
