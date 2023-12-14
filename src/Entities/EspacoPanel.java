@@ -1,47 +1,40 @@
 package Entities;
 
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
+import javax.swing.*;
 
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import com.toedter.calendar.JCalendar;
 
-import com.toedter.calendar.JDateChooser;
+import java.awt.*;
 
 public class EspacoPanel extends JPanel {
-	
     public EspacoPanel() {
         setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.anchor = GridBagConstraints.WEST;
-        gbc.insets = new Insets(5, 5, 5, 5);
+        GridBagConstraints gbcEspaco = new GridBagConstraints();
+        gbcEspaco.gridx = 0;
+        gbcEspaco.gridy = 0;
+        gbcEspaco.anchor = GridBagConstraints.WEST;
+        gbcEspaco.insets = new Insets(5, 5, 5, 5);
 
-        add(new JLabel("Localização:"), gbc);
-        gbc.gridx++;
-        add(new JTextField(20), gbc);
+        add(new JLabel("Localização:"), gbcEspaco);
+        gbcEspaco.gridx++;
+        add(new JTextField(30), gbcEspaco);
 
-        gbc.gridx = 0;
-        gbc.gridy++;
-        add(new JLabel("Horário:"), gbc);
-        gbc.gridx++;
-        add(new JTextField(10), gbc);
+        gbcEspaco.gridx = 0;
+        gbcEspaco.gridy++;
+        add(new JLabel("Horário:"), gbcEspaco);
+        gbcEspaco.gridx++;
+        add(new JTextField(30), gbcEspaco);
 
-        gbc.gridx = 0;
-        gbc.gridy++;
-        add(new JLabel("Data:"), gbc);
-        gbc.gridx++;
+        gbcEspaco.gridx = 0;
+        gbcEspaco.gridy++;
+        add(new JLabel("Data:"), gbcEspaco);
+        gbcEspaco.gridx++;
+        add(new JCalendar(), gbcEspaco);
 
-        // Substituído JCalendar por JDateChooser
-        add(new JDateChooser(), gbc);
-
-        gbc.gridx = 0;
-        gbc.gridy++;
-        add(new JLabel("Valor do Espaço:"), gbc);
-        gbc.gridx++;
-        add(new JTextField(10), gbc);
+        gbcEspaco.gridx = 0;
+        gbcEspaco.gridy++;
+        add(new JLabel("Valor do Espaço:"), gbcEspaco);
+        gbcEspaco.gridx++;
+        add(new JTextField(10), gbcEspaco);
     }
 }

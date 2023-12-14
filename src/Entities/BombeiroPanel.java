@@ -6,20 +6,20 @@ import java.awt.*;
 public class BombeiroPanel extends JPanel {
     public BombeiroPanel() {
         setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.anchor = GridBagConstraints.WEST;
-        gbc.insets = new Insets(5, 5, 5, 5);
+        GridBagConstraints gbcBombeiro = new GridBagConstraints();
+        gbcBombeiro.gridx = 0;
+        gbcBombeiro.gridy = 0;
+        gbcBombeiro.anchor = GridBagConstraints.WEST;
+        gbcBombeiro.insets = new Insets(5, 5, 5, 5);
 
-        add(new JLabel("Descrição do Bombeiro:"), gbc);
-        gbc.gridx++;
-        add(new JTextField(15), gbc);
+        add(new JLabel("Descrição do Bombeiro:"), gbcBombeiro);
+        gbcBombeiro.gridx++;
+        add(new JTextField(30), gbcBombeiro);
 
-        gbc.gridx = 0;
-        gbc.gridy++;
-        add(new JLabel("Valor do Bombeiro:"), gbc);
-        gbc.gridx++;
-        add(new JTextField(10), gbc);
+        gbcBombeiro.gridx = 0;
+        gbcBombeiro.gridy++;
+        add(new JLabel("Valor do Bombeiro:"), gbcBombeiro);
+        gbcBombeiro.gridx++;
+        add(new JTextField(10), gbcBombeiro);
     }
 }

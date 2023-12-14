@@ -6,20 +6,20 @@ import java.awt.*;
 public class EquipamentoPanel extends JPanel {
     public EquipamentoPanel() {
         setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.anchor = GridBagConstraints.WEST;
-        gbc.insets = new Insets(5, 5, 5, 5);
+        GridBagConstraints gbcEquipamento = new GridBagConstraints();
+        gbcEquipamento.gridx = 0;
+        gbcEquipamento.gridy = 0;
+        gbcEquipamento.anchor = GridBagConstraints.WEST;
+        gbcEquipamento.insets = new Insets(5, 5, 5, 5);
 
-        add(new JLabel("Descrição do Equipamento:"), gbc);
-        gbc.gridx++;
-        add(new JTextField(15), gbc);
+        add(new JLabel("Descrição do Equipamento:"), gbcEquipamento);
+        gbcEquipamento.gridx++;
+        add(new JTextField(30), gbcEquipamento);
 
-        gbc.gridx = 0;
-        gbc.gridy++;
-        add(new JLabel("Valor do Equipamento:"), gbc);
-        gbc.gridx++;
-        add(new JTextField(10), gbc);
+        gbcEquipamento.gridx = 0;
+        gbcEquipamento.gridy++;
+        add(new JLabel("Valor do Equipamento:"), gbcEquipamento);
+        gbcEquipamento.gridx++;
+        add(new JTextField(10), gbcEquipamento);
     }
 }

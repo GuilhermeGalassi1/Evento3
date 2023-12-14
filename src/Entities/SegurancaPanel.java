@@ -6,20 +6,20 @@ import java.awt.*;
 public class SegurancaPanel extends JPanel {
     public SegurancaPanel() {
         setLayout(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.anchor = GridBagConstraints.WEST;
-        gbc.insets = new Insets(5, 5, 5, 5);
+        GridBagConstraints gbcSeguranca = new GridBagConstraints();
+        gbcSeguranca.gridx = 0;
+        gbcSeguranca.gridy = 0;
+        gbcSeguranca.anchor = GridBagConstraints.WEST;
+        gbcSeguranca.insets = new Insets(5, 5, 5, 5);
 
-        add(new JLabel("Descrição da Segurança:"), gbc);
-        gbc.gridx++;
-        add(new JTextField(15), gbc);
+        add(new JLabel("Descrição da Segurança:"), gbcSeguranca);
+        gbcSeguranca.gridx++;
+        add(new JTextField(30), gbcSeguranca);
 
-        gbc.gridx = 0;
-        gbc.gridy++;
-        add(new JLabel("Valor da Segurança:"), gbc);
-        gbc.gridx++;
-        add(new JTextField(10), gbc);
+        gbcSeguranca.gridx = 0;
+        gbcSeguranca.gridy++;
+        add(new JLabel("Valor da Segurança:"), gbcSeguranca);
+        gbcSeguranca.gridx++;
+        add(new JTextField(10), gbcSeguranca);
     }
 }
